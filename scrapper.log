@@ -42,3 +42,36 @@ INFO:werkzeug:172.20.10.9 - - [22/Feb/2023 11:24:04] "GET /static/css/main.css H
 INFO:werkzeug:172.20.10.9 - - [22/Feb/2023 11:24:04] "GET /static/css/style.css HTTP/1.1" 200 -
 INFO:werkzeug:172.20.10.9 - - [22/Feb/2023 11:24:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 INFO:werkzeug:172.20.10.9 - - [22/Feb/2023 11:24:16] "POST /review HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2025 20:25:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2025 20:25:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:bad auth : Authentication failed., full error: {'ok': 0, 'errmsg': 'bad auth : Authentication failed.', 'code': 8000, 'codeName': 'AtlasError'}
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2025 20:26:26] "[37mPOST /review HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2025 20:34:59] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2025 20:34:59] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2025 20:34:59] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2025 20:34:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /review [POST]
+Traceback (most recent call last):
+  File "C:\Users\asus4\OneDrive\Desktop\amaan\.venv\Lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus4\OneDrive\Desktop\amaan\.venv\Lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus4\OneDrive\Desktop\amaan\.venv\Lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\asus4\OneDrive\Desktop\amaan\.venv\Lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\asus4\OneDrive\Desktop\amaan\.venv\Lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus4\OneDrive\Desktop\amaan\.venv\Lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\asus4\OneDrive\Desktop\amaan\img_scraper\app.py", line 69, in index
+    logging.info(e)
+                 ^
+UnboundLocalError: cannot access local variable 'e' where it is not associated with a value
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2025 20:35:23] "[35m[1mPOST /review HTTP/1.1[0m" 500 -

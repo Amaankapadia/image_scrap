@@ -65,9 +65,10 @@ def index():
 
                     return "image laoded"
                 except Exception as e:
-                    logging.info(e)
-                    return 'something is wrong'
-            # return render_template('results.html')
+                   print("ERROR:", e)
+                logging.info(e)
+                return f"something is wrong: {str(e)}"
+
 
     else:
         return render_template('index.html')
